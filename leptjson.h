@@ -1,5 +1,5 @@
-#ifndef LRPTJSON_H__
-#define LRPTJSON_H__
+#ifndef LEPTJSON_H__
+#define LEPTJSON_H__
 
 typedef enum
 {
@@ -20,4 +20,5 @@ typedef struct
 int lept_parse(lept_value *value, const char *json);
 
 lept_type lept_get_value(const lept_value *value);
-#endif // LRPTJSON_H__
+
+#endif // LEPTJSON_H__
