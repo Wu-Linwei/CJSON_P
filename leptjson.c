@@ -12,7 +12,7 @@ int lept_parse(lept_value *value, const char *json)
     lept_context c;
     assert(v != NULL);
     c.json = json;
-    v.type = LEPT_NULL;
+    v->tyoe = LEPT_NULL;
     lept_parse_whitespace(&c);
     return lept_parse_value(&c, v);
 }
