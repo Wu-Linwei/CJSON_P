@@ -29,4 +29,4 @@ int lept_parse(lept_value *value, const char *json);
 
 lept_type lept_get_value(const lept_value *value);
 
-#endif // LEPTJSON_H__
+#endif /* LEPTJSON_H__ */
