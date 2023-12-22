@@ -4,15 +4,15 @@
 #include "leptjson.h"
 
 static int main_ret = 0;
-static int tets_count = 0;
+static int test_count = 0;
 static int test_pass = 0;
 
 #define EXPECT_EQ_BASE(equality, expect, actual, format)                                                          \
     do                                                                                                            \
     {                                                                                                             \
-        tets_count++;                                                                                             \
+        test_count++;                                                                                             \
         if (equality)                                                                                             \
-            tets_count++;                                                                                         \
+            test_pass++;                                                                                          \
         else                                                                                                      \
         {                                                                                                         \
             fprintf(stderr, "%s:%d: expect: " format "actual: " format "\n", __FILE__, __LINE__, expect, actual); \
@@ -93,6 +93,6 @@ static void test_parse()
 int main()
 {
     test_parse();
-    printf("%d/%d (%3.2f%%) passed\n", test_pass, tets_count, test_pass * 100.0 / tets_count);
+    printf("%d/%d (%3.2f%%) passed\n", test_pass, test_count, test_pass * 100.0 / test_count);
     return main_ret;
 }
